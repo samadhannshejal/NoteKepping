@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+#add-box{
+    margin: 0px auto;
+    border: 1px solid #999;
+    border-radius: 10px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 5px 5px gray ;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+}
+#wrapper{
+    padding: 30px;
+    position: relative;
+}
+#add-box i{
+    /* padding: 20px 0px; */
+    margin: 20px 0px;
+    font-size: x-large;
+}
+.pop-up{
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0,0,0,0.4);
+   
+    z-index: 2;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+
+}
+.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#pop-up-content{
+    width: 40%;
+    height: 70%;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    margin: 100px auto;
+    padding: 20px;
+   
+}
+.pop-up header{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.pop-up header i {
+    cursor: pointer;
+     font-size: x-large;
+}
+#pop-up-content input{
+    height: 30px;
+    width: 50%;
+}
+#submit{
+    font-size: x-large;
+    background-color:rgb(78, 71, 71);
+    color: #fff;
+    
+    border-radius: 5px;
+    
+}
+#notes {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin: 30px auto;
+    
+}
+#notes > div {
+    border: 1px solid #999;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 10px 5px 5px gray ;
+    /* line-height: 20px; */
+}
+#notes button{
+    background-color: rgb(173, 26, 26);
+    color: white;
+    cursor: pointer;
+     border: none;
+     font-size: x-large;
+     border-radius: 5px;
+}
+@media (max-width:480px) {
+    #add-box{
+        width: 80%;
+      }
+    #pop-up-content{
+        width: 80%;
+        overflow: hidden;
+      }
+    #notes{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 25px;
+        margin: 30px auto;
+    }
+    
+}
+@media (max-width:346px) {
+      #add-box{
+        width: 100%;
+      }
+      #pop-up-content{
+        width: 100%;
+        overflow: hidden;
+      }
+      #notes{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 25px;
+        margin: 30px auto;
+    }
+}
+@media (max-width:766px) {
+    #pop-up-content{
+        width: 70%;
+        overflow: hidden;
+      }
+}
+@media (max-width:1300px) {
+    #pop-up-content{
+        width: 50%;
+        overflow: hidden;
+      }
+}
